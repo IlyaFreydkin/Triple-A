@@ -1,0 +1,15 @@
+@startuml "Model"
+
+
+entity Author{
+    +Firstname : string 
+    + Lastname : string
+    +Email : string
+    + Phone : string[0,1]
+}
+entity Article{
+
+   
+}
+
+@enduml
