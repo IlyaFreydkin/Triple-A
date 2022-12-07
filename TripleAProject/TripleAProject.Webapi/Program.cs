@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
@@ -9,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 var opt = new DbContextOptionsBuilder()
     .UseMySql(
-        builder.GetConnectionString("MySql"),
+        builder.Configuration.GetConnectionString("MySql"),
         new MariaDbServerVersion(new Version(10, 4, 22))
     )
     .Options;
