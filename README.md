@@ -21,6 +21,6 @@ Unter File gibt es ein Steckerartiges Symbol (new Database Connection) und klick
 
 ## 2.Step
 Anschließend erscheint ein Menü: 
-    1. Wähle MariaDB aus
-    2. Ändere Database zu "TripleA"
-    3. Ändere Passwort zu "mysql"
+1. Wähle MariaDB aus
+2. Ändere Database zu "TripleA"
+3. Ändere Passwort zu "mysql"
