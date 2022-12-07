@@ -1,15 +1,33 @@
 @startuml "Model"
 
 
-entity Author{
-    +Firstname : string 
-    + Lastname : string
-    +Email : string
-    + Phone : string[0,1]
+entity Movie{
+    +Id : int 
+    + Title : string
+    +Link : string
+    + Rating : Rating
 }
-entity Article{
+entity User{
 
+    +Id : int
+    +Name : string
+    +Email : string
+    +Password : string
+    + Admin : bool
    
+}
+
+entity Genre{
+
++ Id : int
++ Name : string
+
+}
+
+entity Rating{
++ Id : int
++Grade : int
+
 }
 
 @enduml
