@@ -3,8 +3,8 @@ Repo für Projekt Triple A, 3CHIF 2022/23
 
 ## Vorbereitung
 
-Lade Docker Desktop bei [I'm an inline-style link]docs.docker.com herunter
-Lade DBeaver bei [I'm an inline-style link]dbeaver.io herunter
+Lade Docker Desktop bei [docs.docker.com](https://docs.docker.com/desktop/install/windows-install/) herunter
+Lade DBeaver bei [dbeaver.io](https://dbeaver.io/) herunter
 
 Erstelle mit folgendem Befehl einen Docker Container von MariaDb:
 
@@ -15,8 +15,8 @@ docker run --name mariadb -d -p 3306:3306 ^
     mariadb:latest
 ```
 
-DBeaver öffnen:
 ## 1.Step
+DBeaver öffnen:
 Unter File gibt es ein Steckerartiges Symbol (new Database Connection) und klicke darauf
 
 ## 2.Step
