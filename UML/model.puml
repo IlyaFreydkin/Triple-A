@@ -17,6 +17,9 @@ entity User{
    
 }
 
+
+
+
 entity Genre{
 
 + Id : int
@@ -28,6 +31,11 @@ entity Rating{
 + Id : int
 +Grade : int
 
+
+
 }
+User o--> Rating
+Rating o--> Movie
+Movie o--> Genre
 
 @enduml
