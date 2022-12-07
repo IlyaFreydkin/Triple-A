@@ -3,6 +3,9 @@ Repo für Projekt Triple A, 3CHIF 2022/23
 
 ## Vorbereitung
 
+Lade Docker Desktop bei [I'm an inline-style link]docs.docker.com herunter
+Lade DBeaver bei [I'm an inline-style link]dbeaver.io herunter
+
 Erstelle mit folgendem Befehl einen Docker Container von MariaDb:
 
 ```
@@ -12,3 +15,12 @@ docker run --name mariadb -d -p 3306:3306 ^
     mariadb:latest
 ```
 
+DBeaver öffnen:
+## 1.Step
+Unter File gibt es ein Steckerartiges Symbol (new Database Connection) und klicke darauf
+
+## 2.Step
+Anschließend erscheint ein Menü: 
+    1. Wähle MariaDB aus
+    2. Ändere Database zu "TripleA"
+    3. Ändere Passwort zu "mysql"
