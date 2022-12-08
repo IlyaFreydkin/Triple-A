@@ -17,8 +17,8 @@ var opt = new DbContextOptionsBuilder()
 
 using (var db = new AAAContext(opt))
 {
-    db.Database.EnsureDeleted();
     db.Database.EnsureCreated();
+    db.Database.EnsureDeleted(); 
 }
 
 if (builder.Environment.IsDevelopment())

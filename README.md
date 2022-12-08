@@ -20,7 +20,4 @@ DBeaver öffnen:
 Unter File gibt es ein Steckerartiges Symbol (new Database Connection) und klicke darauf
 
 ## 2.Step
-Anschließend erscheint ein Menü: 
-1. Wähle MariaDB aus
-2. Ändere Database zu "TripleA"
-3. Ändere Passwort zu "mysql"
+Noch in Bearbeitung
