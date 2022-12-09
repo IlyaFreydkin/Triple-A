@@ -20,4 +20,8 @@ DBeaver öffnen:
 Unter File gibt es ein Steckerartiges Symbol (new Database Connection) und klicke darauf
 
 ## 2.Step
-Noch in Bearbeitung 
+1. Nimmt MariaDB
+2. Database: TripleA
+3. Port: 13306
+4. Password: MySecretPassword
+5. Finish drücken
