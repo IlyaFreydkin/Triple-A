@@ -2,13 +2,13 @@
 Repo für Projekt Triple A, 3CHIF 2022/23
 
 
-## benötigte Software
+## Software
 Lade Docker Desktop bei [docs.docker.com](https://docs.docker.com/desktop/install/windows-install/) herunter. <br>
 Lade DBeaver bei [dbeaver.io](https://dbeaver.io/) herunter. <br>
 
 
 ## Vorbereitung
-Nimm diese [Video](https://youtu.be/ekmGqHBVNTM) zur Hilfe!
+Nimm diese [Video](https://youtu.be/ekmGqHBVNTM) zur Hilfe! <br>
 Erstelle mit folgendem Befehl (in cmd) einen Docker Container von MariaDb:
 
 ```
