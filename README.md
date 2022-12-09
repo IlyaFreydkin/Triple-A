@@ -5,7 +5,7 @@ Repo für Projekt Triple A, 3CHIF 2022/23
 
 Lade Docker Desktop bei [docs.docker.com](https://docs.docker.com/desktop/install/windows-install/) herunter. <br>
 Lade DBeaver bei [dbeaver.io](https://dbeaver.io/) herunter. <br>
-Lade linux kernel update package bei [learn.microsoft.com](WSL2 Linux kernel update package for x64 machines) herunter.
+Lade Linux Kernel Update Package bei [learn.microsoft.com](https://learn.microsoft.com/en-us/windows/wsl/install-manual) herunter.
 
 Erstelle mit folgendem Befehl (in cmd) einen Docker Container von MariaDb:
 
