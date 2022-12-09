@@ -1,7 +1,26 @@
 using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
+using TripleAProject.Webapi.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
+
+var opt = new DbContextOptionsBuilder()
+    .UseMySql(
+        builder.Configuration.GetConnectionString("MySql"),
+        new MariaDbServerVersion(new Version(10, 4, 22))
+    )
+    .Options;
+
+using (var db = new AAAContext(opt))
+{
+    db.Database.EnsureCreated();
+    db.Database.EnsureDeleted(); 
+}
+
 if (builder.Environment.IsDevelopment())
 {
     builder.Services.AddCors(options =>

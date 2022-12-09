@@ -5,6 +5,8 @@ namespace TripleAProject.Webapi.Infrastructure
 {
     public class AAAContext : DbContext
     {
+        public AAAContext(DbContextOptions opt) : base(opt) { }
+
         public DbSet<User> Users => Set<User>();
         public DbSet<Movie> Movies => Set<Movie>();
         public DbSet<Rating> Ratings => Set<Rating>();
