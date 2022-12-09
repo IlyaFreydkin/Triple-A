@@ -7,19 +7,14 @@ using System;
 using TripleAProject.Webapi.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
-
-var opt = new DbContextOptionsBuilder()
-    .UseMySql(
-        builder.Configuration.GetConnectionString("MySql"),
-        new MariaDbServerVersion(new Version(10, 4, 22))
-    )
-    .Options;
-
-using (var db = new AAAContext(opt))
+builder.Services.AddControllers();
+builder.Services.AddDbContext<AAAContext>(opt =>
 {
-    db.Database.EnsureCreated();
-    db.Database.EnsureDeleted(); 
-}
+    opt.UseMySql(
+        builder.Configuration.GetConnectionString("MySql"),
+        new MariaDbServerVersion(new Version(10, 4, 22)));
+});
+
 
 if (builder.Environment.IsDevelopment())
 {
@@ -33,11 +28,18 @@ if (builder.Environment.IsDevelopment())
     });
 }
 var app = builder.Build();
+app.UseHttpsRedirection();
 if (app.Environment.IsDevelopment())
 {
+    using (var scope = app.Services.CreateScope())
+        using (var db = scope.ServiceProvider.GetRequiredService<AAAContext>())
+    {
+        db.Database.EnsureDeleted();
+        db.Database.EnsureCreated();
+    }
     app.UseCors();
 }
+app.MapControllers();
 app.UseStaticFiles();
-app.MapGet("/api/news", () => "News");
 app.MapFallbackToFile("index.html");
 app.Run();
