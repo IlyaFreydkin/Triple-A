@@ -25,3 +25,7 @@ Unter File gibt es ein Steckerartiges Symbol (new Database Connection) und klick
 3. Port: 13306
 4. Password: MySecretPassword
 5. Finish drücken
+
+
+## 3.Step
+Der branch für issues ist jetzt angelegt!
