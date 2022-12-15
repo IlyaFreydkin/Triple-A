@@ -7,6 +7,8 @@ Lade Docker Desktop bei [docs.docker.com](https://docs.docker.com/desktop/instal
 Lade DBeaver bei [dbeaver.io](https://dbeaver.io/) herunter. <br>
 
 
+
+
 ## Vorbereitung
 Nimm diese [Video](https://youtu.be/ekmGqHBVNTM) zur Hilfe! <br>
 Erstelle mit folgendem Befehl (in cmd) einen Docker Container von MariaDb:
@@ -30,8 +32,7 @@ drop database if exists TripleA
 create database TripleA
 ```
 
-
-3. DBeaver öffnen:
+3. DBeaver öffnen: 
 Unter File gibt es ein Steckerartiges Symbol (new Database Connection) und klicke darauf
 
 # 2.Step
@@ -40,6 +41,12 @@ Unter File gibt es ein Steckerartiges Symbol (new Database Connection) und klick
 3. Port: 13306
 4. Password: MySecretPassword
 5. Finish drücken
+
+
+
+# Problembehandlung bei der Installation
+Eines der meisten Fehler, wenn sowohl Docker als auch DBeaver nicht funktioniert, ist ein besetzter Port. Um das zu überprüfen cmd aufmachen und ```netstat -an``` eingeben. Dieser Befehl zeigt offene und besetzte Ports. Falls das Port besetzt ist gibt es zwei Möglichkeiten. Entweder beendet man das Prozess, welches auf dem Port läuft oder man gibt Bei dem DBeaver, Docker, Workbench und in den appsettings.json einen anderen freien Port an.
+
 
 
 ## Info
