@@ -9,7 +9,7 @@ namespace TripleAProject.Webapi.Infrastructure
 
         public DbSet<User> Users => Set<User>();
         public DbSet<Movie> Movies => Set<Movie>();
-        public DbSet<MovieRating> Ratings => Set<MovieRating>();
+        public DbSet<MovieRating> MovieRatings => Set<MovieRating>();
         public DbSet<Genre> Genres => Set<Genre>();
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
