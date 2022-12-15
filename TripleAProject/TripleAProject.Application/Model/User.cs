@@ -8,19 +8,18 @@ namespace TripleAProject.Webapi.Model
     [Index(nameof(Email), IsUnique = true)]
     public class User
     {
-        
+
 #pragma warning disable CS8618
         protected User() { }
 #pragma warning restore CS8618
 
-        public User(string name, string email, string password)
+        public User(string name, string password, string email, Userrole role)
         {
-            
             Name = name;
-            Email = email;
             Password = password;
+            Email = email;
+            Role = role;
         }
-
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -29,7 +28,7 @@ namespace TripleAProject.Webapi.Model
         [MaxLength(20)]
         public string Password { get; set; }   
         public string Email { get; set; }   
-        public bool Admin { get; set; }
+        public Userrole Role { get; set; }
         public Guid Guid { get; set; }
     }
 }
