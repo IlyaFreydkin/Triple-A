@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -7,17 +8,19 @@ namespace TripleAProject.Webapi.Model
     [Index(nameof(Email), IsUnique = true)]
     public class User
     {
-#pragma warning disable CS8618 
+        
+#pragma warning disable CS8618
         protected User() { }
-#pragma warning restore CS8618 
+#pragma warning restore CS8618
 
-        public User(string name, string password, string email, bool admin)
+        public User(string name, string email, string password)
         {
+            
             Name = name;
-            Password = password;
             Email = email;
-            Admin = admin;
+            Password = password;
         }
+
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -27,6 +30,6 @@ namespace TripleAProject.Webapi.Model
         public string Password { get; set; }   
         public string Email { get; set; }   
         public bool Admin { get; set; }
-        
+        public Guid Guid { get; set; }
     }
 }
