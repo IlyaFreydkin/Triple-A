@@ -9,11 +9,13 @@ namespace TripleAProject.Webapi.Model
         protected Movie() { }
 
 #pragma warning restore CS8618
-        public Movie(string title, string link, Rating rating)
+
+        public Movie(string title, string link, Genre genre)
         {
             Title = title;
             Link = link;
-            Rating = rating;
+            Genre = genre;
+
         }
 
         [Key]
@@ -21,6 +23,10 @@ namespace TripleAProject.Webapi.Model
         public int Id { get; private set; }
         public string Title { get; set; }
         public string Link { get; set; }
-        public Rating Rating { get; set; }  
+
+
+        public Genre Genre { get; set; }
+
+
     }
 }
