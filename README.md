@@ -27,16 +27,9 @@ Unter File gibt es ein Steckerartiges Symbol (new Database Connection) und klick
 2. Database: TripleA
 3. Port: 13306
 4. Password: MySecretPassword
-<<<<<<< HEAD
 5. Finish drücken
 
 
-## 3.Step
+# Info
 Der branch für issues ist jetzt angelegt!
-=======
 
-## ilya ist russe
-
-
-
->>>>>>> 2c76250f926b9d752f15019e80728326db5bb6b6
