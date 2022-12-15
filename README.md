@@ -28,8 +28,8 @@ docker run --name mariadb -d -p 13306:3306 ^
 
 2. In dem Querry file folgenden Befehl eingeben und ausführen:
 ```
-drop database if exists TripleA
-create database TripleA
+drop database if exists TripleA;
+create database TripleA;
 ```
 
 3. DBeaver öffnen: 
