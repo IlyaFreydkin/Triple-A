@@ -18,11 +18,11 @@ docker run --name mariadb -d -p 13306:3306 ^
     mariadb:latest
 ```
 
-## 1.Step
+# 1.Step
 DBeaver öffnen:
 Unter File gibt es ein Steckerartiges Symbol (new Database Connection) und klicke darauf
 
-## 2.Step
+# 2.Step
 1. Nimmt MariaDB
 2. Database: TripleA
 3. Port: 13306
@@ -30,6 +30,6 @@ Unter File gibt es ein Steckerartiges Symbol (new Database Connection) und klick
 5. Finish drücken
 
 
-# Info
+## Info
 Der branch für issues ist jetzt angelegt!
 
