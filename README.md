@@ -19,7 +19,19 @@ docker run --name mariadb -d -p 13306:3306 ^
 ```
 
 # 1.Step
-DBeaver öffnen:
+
+1. MySql Workbench öffnen und neue connection starten:
+    - Port: 13306
+    - Version: 5.6
+
+2. In dem Querry file folgenden Befehl eingeben und ausführen:
+```
+drop database if exists TripleA
+create database TripleA
+```
+
+
+3. DBeaver öffnen:
 Unter File gibt es ein Steckerartiges Symbol (new Database Connection) und klicke darauf
 
 # 2.Step
@@ -32,4 +44,5 @@ Unter File gibt es ein Steckerartiges Symbol (new Database Connection) und klick
 
 ## Info
 Der branch für issues ist jetzt angelegt!
+
 
