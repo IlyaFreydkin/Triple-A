@@ -15,6 +15,7 @@ namespace TripleAProject.Webapi.Infrastructure
         public DbSet<Movie> Movies => Set<Movie>();
         public DbSet<MovieRating> MovieRatings => Set<MovieRating>();
         public DbSet<Genre> Genres => Set<Genre>();
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
@@ -22,8 +23,6 @@ namespace TripleAProject.Webapi.Infrastructure
 
         public void Seed()
         {
-
-
             Randomizer.Seed = new Random(1619);   
             var faker = new Faker("de");
 
@@ -32,18 +31,16 @@ namespace TripleAProject.Webapi.Infrastructure
                 return new User(
                     name: f.Name.LastName(),
                     email: $"{f.Name.FirstName()}@gmail.at",
-                    password: f.Internet.Password())
-
+                    password: f.Internet.Password(),
+                    role: f.PickRandom<Userrole>())
+                    
                 { Guid = f.Random.Guid() };
             })
-                .Generate(20)
-                .ToList();
-                Users.AddRange(users);
-                SaveChanges();
-
-
-            
-                
+            .Generate(20)
+            .ToList();
+            Users.AddRange(users);
+            SaveChanges();           
+         
             var movies = new Faker<Movie>("de").CustomInstantiator(f =>
             {
                 return new Movie(
@@ -51,13 +48,31 @@ namespace TripleAProject.Webapi.Infrastructure
                     link: f.Internet.Url(),
                     genre: (new Genre(f.Name.FirstName())))
 
-                    { Guid = f.Random.Guid() };
+                 { Guid = f.Random.Guid() };
 
             })
                 .Generate(20)
                 .ToList();
                 Movies.AddRange(movies);
                 SaveChanges();
+
+                  
+
+           
+
+            var genres = new Faker<Genre>("de").CustomInstantiator(f=>
+            {
+                return new Genre(
+                    
+                    name: f.Commerce.Categories(1).First())
+                
+                { Guid = f.Random.Guid() };
+            })
+            .Generate(15)
+            .ToList();
+            Genres.AddRange(genres);
+            SaveChanges();
+
 
 
 
@@ -84,10 +99,14 @@ namespace TripleAProject.Webapi.Infrastructure
                 { Guid = f.Random.Guid() };
             })
 
+
                 .Generate(20)
                 .ToList();
             MovieRatings.AddRange(movieratings);
             SaveChanges();
+
+
+            
 
         }
 

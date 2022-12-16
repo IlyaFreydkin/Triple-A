@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -27,6 +28,8 @@ namespace TripleAProject.Webapi.Model
         public Guid Guid { get; set; }
 
         public Genre Genre { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public List<MovieRating> Rating { get; set; } = new();
 
 
     }
