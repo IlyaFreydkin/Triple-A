@@ -23,7 +23,7 @@ namespace TripleAProject.Webapi.Infrastructure
 
         public void Seed()
         {
-            Randomizer.Seed = new Random(1619);   
+            Randomizer.Seed = new Random(1619);
             var faker = new Faker("de");
 
             var users = new Faker<User>("de").CustomInstantiator(f =>
@@ -33,83 +33,64 @@ namespace TripleAProject.Webapi.Infrastructure
                     email: $"{f.Name.FirstName()}@gmail.at",
                     password: f.Internet.Password(),
                     role: f.PickRandom<Userrole>())
-                    
                 { Guid = f.Random.Guid() };
             })
             .Generate(20)
             .ToList();
             Users.AddRange(users);
-            SaveChanges();           
-         
-            var movies = new Faker<Movie>("de").CustomInstantiator(f =>
-            {
-                return new Movie(
-                    title: f.Lorem.Sentence(),
-                    link: f.Internet.Url(),
-                    genre: (new Genre(f.Name.FirstName())))
+            SaveChanges();
 
-                 { Guid = f.Random.Guid() };
 
-            })
-                .Generate(20)
-                .ToList();
-                Movies.AddRange(movies);
-                SaveChanges();
 
-                  
-
-           
-
-            var genres = new Faker<Genre>("de").CustomInstantiator(f=>
+            var genres = new Faker<Genre>("de").CustomInstantiator(f =>
             {
                 return new Genre(
-                    
+
                     name: f.Commerce.Categories(1).First())
-                
+
                 { Guid = f.Random.Guid() };
             })
             .Generate(15)
+            .GroupBy(c => c.Name).Select(g => g.First())
             .ToList();
             Genres.AddRange(genres);
             SaveChanges();
 
 
 
+            var movies = new Faker<Movie>("de").CustomInstantiator(f =>
+            {
+                return new Movie(
+                    title: f.Lorem.Sentence(),
+                    link: f.Internet.Url(),
+                    genre: (new Genre(f.Name.FirstName())))
+                { Guid = f.Random.Guid() };
 
-            //var genres = new Faker<Genre>("de").CustomInstantiator(f=>
-            //{
-            //    return new Genre(
-
-            //        name: f.Name.FindName())
-
-            //    { Guid = f.Random.Guid() };
-            //})
-            //    .Generate(15)
-            //    .ToList();
-            //    Genres.AddRange(genres);
-            //    SaveChanges();
+            })
+            .Generate(20)
+            .ToList();
+            Movies.AddRange(movies);
+            SaveChanges();
 
             var movieratings = new Faker<MovieRating>("de").CustomInstantiator(f =>
             {
-
                 return new MovieRating(
-                    value: f.Random.Int(1, 10),
+                    value: f.Random.Int(1, 5),
                     movie: Movies.OrderBy(m => Guid.NewGuid()).First(),
                     user: Users.OrderBy(u => Guid.NewGuid()).First())
                 { Guid = f.Random.Guid() };
             })
 
 
-                .Generate(20)
-                .ToList();
+            .Generate(20)
+            .ToList();
             MovieRatings.AddRange(movieratings);
             SaveChanges();
 
 
-            
+
 
         }
 
     }
 }
-
