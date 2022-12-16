@@ -49,33 +49,32 @@ namespace TripleAProject.Webapi.Infrastructure
                 return new Movie(
                     title: f.Lorem.Sentence(),
                     link: f.Internet.Url(),
-                    genre: Genres.OrderBy(g => Guid.NewGuid()).First())
+                    genre: (new Genre(f.Name.FirstName())))
 
-
-                   { Guid = f.Random.Guid() };
+                    { Guid = f.Random.Guid() };
 
             })
                 .Generate(20)
                 .ToList();
                 Movies.AddRange(movies);
-                SaveChanges();  
-                
-
-
-            var genres = new Faker<Genre>("de").CustomInstantiator(f=>
-            {
-                return new Genre(
-                    
-                    name: f.Commerce.Categories(1).First())
-                
-                { Guid = f.Random.Guid() };
-            })
-                .Generate(15)
-                .ToList();
-                Genres.AddRange(genres);
                 SaveChanges();
 
-            var movieratings = new Faker<MovieRating>("de").CustomInstantiator(f=>
+
+
+            //var genres = new Faker<Genre>("de").CustomInstantiator(f=>
+            //{
+            //    return new Genre(
+
+            //        name: f.Name.FindName())
+
+            //    { Guid = f.Random.Guid() };
+            //})
+            //    .Generate(15)
+            //    .ToList();
+            //    Genres.AddRange(genres);
+            //    SaveChanges();
+
+            var movieratings = new Faker<MovieRating>("de").CustomInstantiator(f =>
             {
 
                 return new MovieRating(
@@ -84,10 +83,11 @@ namespace TripleAProject.Webapi.Infrastructure
                     user: Users.OrderBy(u => Guid.NewGuid()).First())
                 { Guid = f.Random.Guid() };
             })
+
                 .Generate(20)
                 .ToList();
-                MovieRatings.AddRange(movieratings);
-                SaveChanges();
+            MovieRatings.AddRange(movieratings);
+            SaveChanges();
 
         }
 

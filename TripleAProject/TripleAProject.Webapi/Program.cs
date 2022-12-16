@@ -36,6 +36,7 @@ if (app.Environment.IsDevelopment())
     {
         db.Database.EnsureDeleted();
         db.Database.EnsureCreated();
+        db.Seed();
     }
     app.UseCors();
 }
