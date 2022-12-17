@@ -56,6 +56,11 @@
 
 }
 
+a {
+    text-decoration: none;
+  
+  }
+
 login-btn {
     font-size: 20px;
 }
