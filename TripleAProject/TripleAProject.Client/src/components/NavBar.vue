@@ -29,9 +29,15 @@
             <li class="nav-item mx-2 pt-2">
             <a class="nav-link active" id="nav-font" aria-current="page" href="#">My Account</a>
             </li>
+
+            <router-link to="/login">
+                <li class="nav-item mx-2 pt-2">
+            <button id="login-btn" class="btn btn-outline-light" type="submit">Login / Sign Up</button>
+            </li>
+            </router-link>
         </ul>
 
-        <button id="login-btn" class="btn btn-outline-light" type="submit">Login / Sign Up</button>
+        
       </form>
     </div>
   </div>
