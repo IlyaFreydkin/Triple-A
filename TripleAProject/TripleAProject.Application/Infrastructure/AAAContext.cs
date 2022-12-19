@@ -68,8 +68,8 @@ namespace TripleAProject.Webapi.Infrastructure
             {
                 return new MovieRating(
                     value: f.Random.Int(1, 5),
-                    movie: Movies.OrderBy(m => Guid.NewGuid()).First(),
-                    user: Users.OrderBy(u => Guid.NewGuid()).First())
+                    movie: f.Random.ListItem(movies),
+                    user: f.Random.ListItem(users))
                 { Guid = f.Random.Guid() };
             })
             .Generate(20)
