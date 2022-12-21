@@ -21,11 +21,11 @@ namespace TripleAProject.Application.Dto
             var db = validationContext.GetRequiredService<AAAContext>();
             if (!db.Movies.Any(m => m.Guid == MovieGuid))
             {
-                yield return new ValidationResult("Author does not exist", new[] { nameof(GenreGuid) });
+                yield return new ValidationResult("Author does not exist", new[] { nameof(MovieGuid) });
             }
             if (!db.Users.Any(u => u.Guid == UserGuid))
             {
-                yield return new ValidationResult("Author does not exist", new[] { nameof(GenreGuid) });
+                yield return new ValidationResult("Author does not exist", new[] { nameof(UserGuid) });
             }
         }
     }
