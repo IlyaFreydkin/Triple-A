@@ -24,11 +24,16 @@ namespace TripleAProject.Webapi.Model
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; private set; }
+        [MaxLength(255)]    
         public string Name { get; set; }
         [MaxLength(20)]
-        public string Password { get; set; }   
-        public string Email { get; set; }   
+        public string Password { get; set; }
+        [MaxLength(255)]
+        [EmailAddress]
+        public string Email { get; set; }
+        [Range(0,1)]
         public Userrole Role { get; set; }
+        public DateTime Created { get; set; }
         public Guid Guid { get; set; }
     }
 }

@@ -23,11 +23,14 @@ namespace TripleAProject.Webapi.Model
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; private set; }
+        [MaxLength(255)]
         public string Title { get; set; }
+        [MaxLength(255)]
         public string Link { get; set; }
         public Guid Guid { get; set; }
 
         public Genre Genre { get; set; }
+        public DateTime Created { get; set; }
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public List<MovieRating> Rating { get; set; } = new();
 
