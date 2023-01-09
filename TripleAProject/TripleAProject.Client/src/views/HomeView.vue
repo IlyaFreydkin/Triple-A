@@ -1,5 +1,9 @@
+<script setup>
+import NavBar from '../components/NavBar.vue'
+
+</script>
+
 <template>
-  <main>
-    Home View
-  </main>
+        <NavBar></NavBar>
+
 </template>
