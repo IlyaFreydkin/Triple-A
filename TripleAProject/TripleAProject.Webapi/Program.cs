@@ -1,8 +1,10 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using TripleAProject.Application.Dto;
 using TripleAProject.Webapi.Infrastructure;
@@ -29,6 +31,27 @@ if (builder.Environment.IsDevelopment())
             });
     });
 }
+
+
+// JWT Authentication ******************************************************************************
+
+
+byte[] secret = Convert.FromBase64String(builder.Configuration["Secret"]);
+builder.Services
+    .AddAuthentication(options => options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(secret),
+            ValidateAudience = false,
+            ValidateIssuer = false
+        };
+    });
+// *************************************************************************************************
+
+
 var app = builder.Build();
 app.UseHttpsRedirection();
 if (app.Environment.IsDevelopment())
