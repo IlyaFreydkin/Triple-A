@@ -34,7 +34,6 @@ namespace TripleAProject.Webapi.Model
         public string Email { get; set; }
         [Range(0,1)]
         public Userrole Role { get; set; }
-        public DateTime Created { get; set; }
         public Guid Guid { get; set; }
         public string Salt { get; set; }
         public string PasswordHash { get; set; }

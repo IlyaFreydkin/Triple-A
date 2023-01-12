@@ -57,6 +57,7 @@ namespace TripleAProject.Webapi.Infrastructure
                 return new Movie(
                     title: f.Lorem.Sentence(),
                     link: f.Internet.Url(),
+                    created: f.Date.Between(new DateTime(2021, 1, 1), new DateTime(2022, 1, 1)),
                     genre: Genres.OrderBy(g => Guid.NewGuid()).First())
                 { Guid = f.Random.Guid() };
             })

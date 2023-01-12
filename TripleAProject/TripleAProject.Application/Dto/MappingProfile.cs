@@ -12,8 +12,6 @@ namespace TripleAProject.Application.Dto
     {
         public MappingProfile()
         {
-            CreateMap<GenreDto, Genre>();
-            CreateMap<Genre, GenreDto>();
             CreateMap<MovieDto, Movie>();
             CreateMap<Movie, MovieDto>(); 
             CreateMap<MovieRatingDto, MovieRating>();
