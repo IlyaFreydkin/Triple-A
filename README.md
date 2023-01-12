@@ -35,7 +35,7 @@ docker run --name mariadb -d -p 13306:3306 ^
 # 3.Step
 
 2. DBeaver öffnen: 
-- Unter File gibt es ein Steckerartiges Symbol (new Database Connection) und klicke darauf
+Unter File gibt es ein Steckerartiges Symbol (new Database Connection) und klicke darauf
 
     1. Nimmt MariaDB
     2. Database: TripleA
