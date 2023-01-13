@@ -18,6 +18,7 @@ namespace TripleAProject.Webapi.Model
             Link = link;
             Genre = genre;
 
+
         }
 
         [Key]
@@ -25,12 +26,12 @@ namespace TripleAProject.Webapi.Model
         public int Id { get; private set; }
         public string Title { get; set; }
         public string Link { get; set; }
+
         public Guid Guid { get; set; }
 
         public Genre Genre { get; set; }
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public List<MovieRating> Rating { get; set; } = new();
-
 
     }
 }
