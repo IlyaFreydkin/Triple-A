@@ -20,6 +20,7 @@ namespace TripleAProject.Webapi.Model
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; private set; }
+        [MaxLength(255)]
         public string Name { get; set; }
         public Guid Guid { get; set; }
 }
