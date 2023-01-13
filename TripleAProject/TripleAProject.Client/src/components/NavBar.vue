@@ -1,5 +1,5 @@
 <template>
-     <nav id="navbar" class="navbar navbar-expand-lg navbar-light ">
+     <nav id="navbar" class="navbar navbar-expand-lg sticky-top navbar-light ">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,19 +51,26 @@
     height: 50px;
 } */
 
+
 #navbar {
     background-image: linear-gradient(to bottom right,#4B279B,#DF99D8);
 
 }
 
+a {
+    text-decoration: none;
+  
+  }
+
 login-btn {
     font-size: 20px;
+    font-family: Poppins, sans-serif;
 }
 
 #nav-font {
     color: white;
     font-size: 20px;
-    
+    font-family: Poppins, sans-serif;
 }
 
 #nav-logo-font {

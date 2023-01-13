@@ -5,7 +5,8 @@ entity Movie{
     +Id : int 
     + Title : string
     +Link : string
-    + Rating : Rating
+    
+    + Genre : Genre
 }
 entity User{
 
@@ -13,7 +14,7 @@ entity User{
     +Name : string
     +Email : string
     +Password : string
-    + Admin : bool
+   
    
 }
 
@@ -27,15 +28,16 @@ entity Genre{
 
 }
 
-entity Rating{
-+ Id : int
-+Grade : int
+entity MovieRating{
++ Value : int
++ Movie : movie
++ User : User
 
 
 
 }
-User o--> Rating
-Rating o--> Movie
+User o--> MovieRating
+MovieRating o--> Movie
 Movie o--> Genre
 
 @enduml

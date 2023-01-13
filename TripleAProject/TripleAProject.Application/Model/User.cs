@@ -28,6 +28,7 @@ namespace TripleAProject.Webapi.Model
         [MaxLength(255)]    
         public string Name { get; set; }
         [MaxLength(20)]
+
         public string? Password { get; set; }
         [MaxLength(255)]
         [EmailAddress]
@@ -73,6 +74,7 @@ namespace TripleAProject.Webapi.Model
             return Convert.ToBase64String(hashedData);
         }
         
+
 
     }
 }

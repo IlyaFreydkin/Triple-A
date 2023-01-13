@@ -20,8 +20,10 @@ namespace TripleAProject.Webapi.Model
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
         public int Id { get; private set; }
         [Range(1,5)]
+
         public int Value { get;  set; }
         public Movie Movie { get; set; }
         public User User { get; set; }
