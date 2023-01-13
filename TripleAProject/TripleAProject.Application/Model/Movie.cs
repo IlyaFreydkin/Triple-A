@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TripleAProject.Webapi.Model
@@ -9,13 +11,14 @@ namespace TripleAProject.Webapi.Model
         protected Movie() { }
 
 #pragma warning restore CS8618
-        public Movie(string title, string link, Rating rating, Genre genre, User user)
+
+        public Movie(string title, string link, Genre genre)
         {
             Title = title;
             Link = link;
-            Rating = rating;
             Genre = genre;
-            User = user;
+
+
         }
 
         [Key]
@@ -23,8 +26,12 @@ namespace TripleAProject.Webapi.Model
         public int Id { get; private set; }
         public string Title { get; set; }
         public string Link { get; set; }
-        public Rating Rating { get; set; }  
+
+        public Guid Guid { get; set; }
+
         public Genre Genre { get; set; }
-        public User User { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public List<MovieRating> Rating { get; set; } = new();
+
     }
 }

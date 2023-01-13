@@ -1,8 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TripleAProject.Webapi.Model
 {
+    [Index(nameof(Name), IsUnique = true)]
     public class Genre
     {
 #pragma warning disable CS8618
@@ -18,5 +21,6 @@ namespace TripleAProject.Webapi.Model
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; private set; }
         public string Name { get; set; }
-    }
+        public Guid Guid { get; set; }
+}
 }
