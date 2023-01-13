@@ -25,12 +25,13 @@ namespace TripleAProject.Webapi.Infrastructure
             Randomizer.Seed = new Random(1619);
             var faker = new Faker("de");
 
+
             var users = new Faker<User>("de").CustomInstantiator(f =>
             {
                 return new User(
-                    name: f.Name.LastName(),
+                    name: f.Name.LastName().ToLower(),
                     email: $"{f.Name.FirstName()}@gmail.at",
-                    password: f.Internet.Password(),
+                    password: "1111",
                     role: f.PickRandom<Userrole>())
                 { Guid = f.Random.Guid() };
             })
@@ -56,6 +57,7 @@ namespace TripleAProject.Webapi.Infrastructure
                 return new Movie(
                     title: f.Lorem.Sentence(),
                     link: f.Internet.Url(),
+                    created: f.Date.Between(new DateTime(2021, 1, 1), new DateTime(2022, 1, 1)),
                     genre: Genres.OrderBy(g => Guid.NewGuid()).First())
                 { Guid = f.Random.Guid() };
             })

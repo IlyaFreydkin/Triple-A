@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TripleAProject.Application\TripleAProject.Application.csproj" />
+	  <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.*" />
   </ItemGroup>
 
 </Project>
