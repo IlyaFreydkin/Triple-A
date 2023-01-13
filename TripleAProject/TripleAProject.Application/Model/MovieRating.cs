@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TripleAProject.Webapi.Model
@@ -22,7 +23,7 @@ namespace TripleAProject.Webapi.Model
         public int Value { get;  set; }
         public Movie Movie { get; set; }
         public User User { get; set; }
-
+        public Guid Guid { get; set; }
 
     }
 }
