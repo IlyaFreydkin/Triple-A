@@ -68,10 +68,6 @@ if (app.Environment.IsDevelopment())
 app.MapControllers();
 app.UseAuthentication();
 app.UseAuthorization();
-//app.UseRouting();
 app.UseStaticFiles();
 app.MapFallbackToFile("index.html");
-app.UseAuthentication();
-app.UseRouting();
-app.UseAuthorization();
 app.Run();
