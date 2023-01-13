@@ -16,7 +16,7 @@ namespace TripleAProject.Webapi.Controllers
     [AllowAnonymous]
     public class UserController : ControllerBase
     {
-        public record CredentialsDto(string username, string password);
+        public record CredentialsDto(string Name, string password);
 
         private readonly AAAContext _db;
         private readonly IConfiguration _config; 
@@ -34,7 +34,7 @@ namespace TripleAProject.Webapi.Controllers
             var secret = Convert.FromBase64String(_config["Secret"]);
             var lifetime = TimeSpan.FromHours(3);
           
-            var user = _db.Users.FirstOrDefault(u => u.Name == credentials.username);
+            var user = _db.Users.FirstOrDefault(u => u.Name == credentials.Name);
             if (user is null) { return Unauthorized(); }
             if (!user.CheckPassword(credentials.password)) { return Unauthorized(); }
 
@@ -72,11 +72,11 @@ namespace TripleAProject.Webapi.Controllers
         public IActionResult GetUserdata()
         {
            
-            var username = HttpContext?.User.Identity?.Name;
-            if (username is null) { return Unauthorized(); }
+            var name = HttpContext?.User.Identity?.Name;
+            if (name is null) { return Unauthorized(); }
 
             
-            var user = _db.Users.FirstOrDefault(u => u.Name == username);
+            var user = _db.Users.FirstOrDefault(u => u.Name == name);
             if (user is null) { return Unauthorized(); }
             return Ok(new
             {
