@@ -73,14 +73,14 @@ Eines der meisten Fehler, wenn sowohl Docker als auch DBeaver nicht funktioniert
 
         - zunächst in einer neuen Connection jeweils einen POST und einen GET Request erstellen. Folgendes JSON ist im Body Tab einzufügen und den Request Abschicken:
         
-        ``` 
+      
         {
             "Name" : "lichtenfeld",
             "Password": "1111",
             "Email": "ilyafreyd00@gmail.com",
             "Role" : 1
         }
-        ```
+      
         
         - Den bekommenen Token in die Zwischenablage kopieren:
             ![image](https://user-images.githubusercontent.com/100792432/212289649-b3ffd414-de05-4b94-a20d-f21bc47818d6.png)
