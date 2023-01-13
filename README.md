@@ -53,34 +53,34 @@ Eines der meisten Fehler, wenn sowohl Docker als auch DBeaver nicht funktioniert
 
 ## Login Use-Case testen:
 
-    - Git Repo auf C/: clonen
+   - Git Repo auf C/: clonen
     
-    - Den installierten Docker container starten:
+   - Den installierten Docker container starten:
     ![image](https://user-images.githubusercontent.com/100792432/212286499-5696d3bf-b55f-4473-ab61-c7c849a9680c.png)
     
-    - Im ordner TripleA Project die datei startServer.cmd starten und warten bis eine leere seite im Browser aufgemacht wird:
+   - Im ordner TripleA Project die datei startServer.cmd starten und warten bis eine leere seite im Browser aufgemacht wird:
     ![image](https://user-images.githubusercontent.com/100792432/212287666-aaceddc2-b288-4c8b-838c-e9c12928ccb6.png)
     
-    - Im ordner TripleA Project die datei TripleAProject.sln starten und Webapi im richtigen Branch ausführen ausführen:
+   - Im ordner TripleA Project die datei TripleAProject.sln starten und Webapi im richtigen Branch ausführen ausführen:
     ![image](https://user-images.githubusercontent.com/100792432/212291250-f5ef7ac3-12c6-458e-b709-581aae9ba581.png)
     
-    - Postman aufmachen und folgende Einstellungen treffen:
-        - In die Settings gehen: 
+   - Postman aufmachen und folgende Einstellungen treffen:
+       - In die Settings gehen: 
           ![image](https://user-images.githubusercontent.com/100792432/212288480-a6c416bd-a12b-4f14-8efb-24c9dfca0775.png)
 
-        - SSL ausschalten:
+       - SSL ausschalten:
           ![image](https://user-images.githubusercontent.com/100792432/212288820-b529ad34-078a-4c3f-be3b-9f294a5764a8.png)
 
-        - zunächst in einer neuen Connection jeweils einen POST und einen GET Request erstellen. Folgendes JSON ist im Body Tab einzufügen und den Request Abschicken:
+       - zunächst in einer neuen Connection jeweils einen POST und einen GET Request erstellen. Folgendes JSON ist im Body Tab einzufügen und den Request Abschicken:
         
-      
+        ```    
         {
             "Name" : "lichtenfeld",
             "Password": "1111",
             "Email": "ilyafreyd00@gmail.com",
             "Role" : 1
         }
-      
+        ```
         
         - Den bekommenen Token in die Zwischenablage kopieren:
             ![image](https://user-images.githubusercontent.com/100792432/212289649-b3ffd414-de05-4b94-a20d-f21bc47818d6.png)
