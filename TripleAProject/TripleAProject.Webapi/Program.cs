@@ -66,6 +66,8 @@ if (app.Environment.IsDevelopment())
     app.UseCors();
 }
 app.MapControllers();
+app.UseAuthentication();
+app.UseAuthorization();
 app.UseStaticFiles();
 app.MapFallbackToFile("index.html");
 app.Run();

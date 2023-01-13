@@ -20,9 +20,9 @@ namespace TripleAProject.Application.Dto
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
             var db = validationContext.GetRequiredService<AAAContext>();
-            if (!db.Movies.Any(g => g.Guid == GenreGuid))
+            if (!db.Genres.Any(g => g.Guid == GenreGuid))
             {
-                yield return new ValidationResult("Author does not exist", new[] { nameof(GenreGuid) });
+                yield return new ValidationResult("Genre does not exist", new[] { nameof(GenreGuid) });
             }
         }
     }
