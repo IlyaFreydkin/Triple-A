@@ -59,6 +59,7 @@ namespace TripleAProject.Webapi.Controllers
             return Ok(movie);
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult AddMovie(MovieDto movieDto)
         {
@@ -74,6 +75,7 @@ namespace TripleAProject.Webapi.Controllers
             return Ok(_mapper.Map<Movie, MovieDto>(movie));
         }
 
+        [Authorize]
         [HttpPut("{guid:Guid}")]
         public IActionResult EditMovie(Guid guid, MovieDto movieDto)
         {
@@ -89,7 +91,8 @@ namespace TripleAProject.Webapi.Controllers
             catch (DbUpdateException) { return BadRequest(); }
             return NoContent();
         }
-    
+
+        [Authorize]
         [HttpDelete("{guid:Guid}")]
         public IActionResult DeleteMovie(Guid guid)
         {
