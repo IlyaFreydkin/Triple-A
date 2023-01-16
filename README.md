@@ -8,7 +8,11 @@ git clone https://github.com/IlyaFreydkin/Triple-A
 
 ## Kurzbeschreibung
 
-Füge mit `![](filename.png)` ein Screenshot der App ein, die eine schöne Maske zeigt.
+![image](https://user-images.githubusercontent.com/100792432/212732602-c075f8f0-f3ca-4897-9aba-37e87d11ee5b.png)
+
+
+![image](https://user-images.githubusercontent.com/100792432/212732672-b9ddd720-8e4b-46c5-ac18-dc52aa272f7d.png)
+
 
 Unser Projekt ist ein Streaming – Plattform, um Filme zu schauen. Tripple A wird eine 
 Web – Applikation, wo es eine Suchfunktion, Wunschliste, Accounts und Feedback zu einem Film abgeben (entweder nur in Form von Likes und Dislikes oder auch mit Kommentaren). Wir haben gedacht, dass so ein Service nützlich sein kann, weil wir selbst oft Filme schauen und die meisten Streaming Anbieter von uns Daten sammeln, was uns nicht gefällt. Wir wollen das verhindern, um unsere und die Privatsphäre unserer User zu schützen.
