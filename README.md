@@ -10,14 +10,19 @@ git clone https://github.com/IlyaFreydkin/Triple-A
 
 Füge mit `![](filename.png)` ein Screenshot der App ein, die eine schöne Maske zeigt.
 
-Füge hier mit 1 Absatz eine kleine Beschreibung ein, was das Projekt macht.
+Unser Projekt ist ein Streaming – Plattform, um Filme zu schauen. Tripple A wird eine 
+Web – Applikation, wo es eine Suchfunktion, Wunschliste, Accounts und Feedback zu einem Film abgeben (entweder nur in Form von Likes und Dislikes oder auch mit Kommentaren). Wir haben gedacht, dass so ein Service nützlich sein kann, weil wir selbst oft Filme schauen und die meisten Streaming Anbieter von uns Daten sammeln, was uns nicht gefällt. Wir wollen das verhindern, um unsere und die Privatsphäre unserer User zu schützen.
+
 
 ## Teammitglieder
 
 | Name                    | Email                  | Aufgabenbereich                         |
 | ----------------------- | ---------------------- | --------------------------------------- |
-| Max *Mustermann*, 3CHIF | mus123@spengergasse.at | Login im Backend, Registration Formular |
-| Max *Mustermann*, 3CHIF | mus123@spengergasse.at | Login im Backend, Registration Formular |
+| Ilya *Freydkin*, 3CHIF | fre22343@spengergasse.at |Login & SignUp im Frontend; Database Seed, Login mit JWT Authentication, User Controller |
+| Richard *Liu*, 3CHIF | liu2291@spengergasse.at |  Controller Angelegt, DTO Klassen erstellt, Movie Controller |
+| Uros *Veljic*, 3CHIF | vel22675@spengergasse.at | Frontend Navbar, Footer; Backend mit den Hauptklassen angelegt |
+| Janus *Messner*, 3CHIF | mes22377@spengergasse.at | Login Frontend geholfen |
+| Mohamed *Ahmed*, 3CHIF | ahm22106@spengergasse.at | |
 
 ## Voraussetzungen
 
@@ -53,6 +58,7 @@ startServer.cmd
 **macOS, Linux**
 
 ```
+chmod 777 startServer.sh
 ./startServer.sh
 ```
 
@@ -60,3 +66,8 @@ Nach dem Starten des Servers kann im Browser die Seite **http://localhost:5000**
 aufgerufen werden. Falls die Meldung erscheint, dass das Zertifikat nicht geprüft werden kann,
 muss mit *Fortsetzen* bestätigt werden.
 
+## Testuser
+
+Um das Login zu testen, kannst du folgende Logindaten verwenden:
+- Username: *lichtenfeld*
+- Passwort: *1111*
