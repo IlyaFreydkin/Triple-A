@@ -1,45 +1,85 @@
 <script setup>
 import NavBar from '../components/NavBar.vue'
+import axios from 'axios'
 
 </script>
 
 <template>
-        <div class="login">
+    <div class="login">
 
-       
 
-          	<NavBar></NavBar>
 
-<div class="wrapper">
-        <div class="logo">
-            <img src="../images/logo.jpg" alt="">
-        </div>
-        <div class="text-center mt-4 name">
-            Triple A
-        </div>
-        <form class="p-3 mt-3">
-            <div class="form-field d-flex align-items-center">
-                <span class="far fa-user"></span>
-                <input type="text" name="userName" id="userName" placeholder="Username">
+        <NavBar></NavBar>
+
+        <div class="wrapper">
+            <div class="logo">
+                <img src="../images/logo.jpg" alt="">
             </div>
-            <div class="form-field d-flex align-items-center">
-                <span class="fas fa-key"></span>
-                <input type="password" name="password" id="pwd" placeholder="Password">
+            <div class="text-center mt-4 name">
+                Triple A
             </div>
-            <button class="btn mt-3">Login</button>
-        </form>
-        <div class="text-center fs-6">
-             or <br> <router-link to="signup"><a href="#">Sign up</a></router-link> 
+            <form class="p-3 mt-3">
+                <div class="form-field d-flex align-items-center">
+                    <span class="far fa-user"></span>
+                    <input v-model="model.name" type="text" name="userName" id="userName" placeholder="Username">
+                </div>
+                <div class="form-field d-flex align-items-center">
+                    <span class="fas fa-key"></span>
+                    <input v-model="model.password" type="password" name="password" id="pwd" placeholder="Password">
+                </div>
+                <button type="button" class="btn mt-3" v-on:click="sendLoginData">Login</button>
+            </form>
+            <div class="text-center fs-6">
+                or <br> <router-link to="signup"><a href="#">Sign up</a></router-link>
+            </div>
         </div>
+
+
     </div>
-    
-
-         </div>
 
 </template>
 
-<style scoped>
+<script>
+export default {
+    data() {
+        return {
+            model: {
+                name: "",
+                password: "",
+            },
+        };
+    },
+    methods: {
+        deleteToken() {
+            delete axios.defaults.headers.common["Authorization"];
+            this.$store.commit("authenticate", null);
+        },
+        async sendLoginData() {
+            console.log("Sending login data")
+            try {
+                await axios.post("https://localhost:5001/api/users/login", {
+                    name: this.model.name,
+                    password: this.model.password,
+                });
+                console.log("Login successful");
+                alert("Eingeloggt mit " + this.model.name)
+            } catch (e) {
+                alert("Login failed");
+            }
+        },
+    },
+    computed: {
+        authenticated() {
+            return this.$store.state.user.isLoggedIn;
+        },
+        username() {
+            return this.$store.state.user.username;
+        },
+    },
+};
+</script>
 
+<style scoped>
 /* Importing fonts from Google */
 
 
@@ -116,7 +156,7 @@ body {
     box-shadow: none;
     width: 100%;
     height: 40px;
-   background-image: linear-gradient(to bottom right,#4B279B,#DF99D8);
+    background-image: linear-gradient(to bottom right, #4B279B, #DF99D8);
     color: #fff;
     border-radius: 25px;
     box-shadow: 3px 3px 3px #b1b1b1,
@@ -144,5 +184,4 @@ body {
         padding: 40px 15px 15px 15px;
     }
 }
-
 </style>
