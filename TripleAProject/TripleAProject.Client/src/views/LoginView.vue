@@ -64,7 +64,7 @@ export default {
                 console.log("Login successful");
                 alert("Eingeloggt mit " + this.model.name)
             } catch (e) {
-                alert("Login successful");
+                alert("Login failed");
             }
         },
     },
