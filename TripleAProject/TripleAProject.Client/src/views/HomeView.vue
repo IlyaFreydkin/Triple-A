@@ -8,15 +8,46 @@ import Card from '../components/Card.vue';
 <template>
     <div id="page">
         <NavBar></NavBar>
+   
+    
      
-    <Banner></Banner>
-       <br>
 
-        <Card></Card>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <Card></Card>
+            </div>
+            <div class="col-3">
+                <Card></Card>
+            </div>
+            <div class="col-3">
+                <Card></Card>
+            </div>
+            <div class="col-3">
+                <Card></Card>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <Card></Card>
+            </div>
+            <div class="col-3">
+                <Card></Card>
+            </div>
+            <div class="col-3">
+                <Card></Card>
+            </div>
+            <div class="col-3">
+                <Card></Card>
+            </div>
+        </div>
 
 
 
       
+    </div>
     </div>
 
     <Footer></Footer>
