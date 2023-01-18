@@ -2,14 +2,17 @@
 import NavBar from '../components/NavBar.vue';
 import Footer from '../components/Footer.vue';
 import Banner from '../components/Banner.vue';
+import Card from '../components/Card.vue';
 </script>
 
 <template>
     <div id="page">
         <NavBar></NavBar>
      
-        <Banner></Banner>
+    <Banner></Banner>
+       <br>
 
+        <Card></Card>
 
 
 
