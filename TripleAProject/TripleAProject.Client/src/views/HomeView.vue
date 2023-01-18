@@ -10,7 +10,7 @@ import Card from '../components/Card.vue';
         <NavBar></NavBar>
    
     
-     
+       <Banner></Banner>
 
 
 
@@ -45,9 +45,11 @@ import Card from '../components/Card.vue';
         </div>
 
 
-
+      
       
     </div>
+
+    
     </div>
 
     <Footer></Footer>
