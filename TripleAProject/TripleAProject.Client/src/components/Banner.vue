@@ -14,11 +14,7 @@
 
 <style scoped>
 
-.font-bg {
-    border: 1px solid white;
-    color: white;
-    border-radius: 30% 70% 66% 34% / 77% 33% 67% 23% ;
-}
+
 .banner-area {
     background-image: url(../images/hinterg.jpg) ;
     background-size: cover;
