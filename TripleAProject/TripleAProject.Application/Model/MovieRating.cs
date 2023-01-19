@@ -1,27 +1,33 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TripleAProject.Webapi.Model
 {
-    [Index(nameof(Name), IsUnique = true)]
-    public class Genre
+    public class MovieRating
     {
 #pragma warning disable CS8618
-        protected Genre() { }
+        protected MovieRating() { }
 #pragma warning restore CS8618
 
-        public Genre(string name)
+        public MovieRating(int value, Movie movie, User user)
         {
-            Name = name;
+            Value = value;
+            Movie = movie;
+            User = user;
         }
+       
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
         public int Id { get; private set; }
-        [MaxLength(255)]
-        public string Name { get; set; }
+        [Range(1,5)]
+
+        public int Value { get;  set; }
+        public Movie Movie { get; set; }
+        public User User { get; set; }
         public Guid Guid { get; set; }
-}
+
+    }
 }
