@@ -40,12 +40,8 @@
                 </h6>
                 <p>
                     Wir sind eine Streaming-Webseite, wo ihr kostenfrei Filme und Serien anschauen könnt.
-
-
-                </p>
-                
+                </p>               
               </div>
-
               <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                 <h6 class="text-uppercase fw-bold mb-4">Genre</h6>
                 <p>
@@ -53,18 +49,14 @@
                 </p>
                 <p>
                   <a href="#" class="text-reset">Serien</a>
-                </p>
-                
+                </p>             
               </div>
               <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                 <h6 class="text-uppercase fw-bold mb-4">Hilfe</h6>
                 <p>
                   <a href="#" class="text-reset">Impressum</a>
-                </p>
-
-                
+                </p>            
               </div>
-
               <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                 <h6 class="text-uppercase fw-bold mb-4">Kontakt</h6>
                 <p>
@@ -74,7 +66,6 @@
                 <p>
                   <i class="fas fa-envelope me-3"></i>
                  tripleaprojekt@gmail.com
-
                 </p>
                 <p><i class="fas fa-phone me-3"></i>+43 1 54615 0</p>
                 <p><i class="fas fa-print me-3"></i>+43 1 54615 139</p>

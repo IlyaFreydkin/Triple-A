@@ -13,9 +13,12 @@
         </li>
         </router-link>
         
+        <router-link to="/foryou">
         <li class="nav-item mx-2 pt-2">
-          <a class="nav-link active" id="nav-font" aria-current="page" href="#">For you</a>
+          <a class="nav-link active" id="nav-font" aria-current="page" href="#">For You</a>
         </li>
+        </router-link>
+        
 
         <li class="nav-item mx-2 pt-2">
           <a class="nav-link active" id="nav-font" aria-current="page" href="#">Wish List</a>
