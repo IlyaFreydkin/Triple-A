@@ -1,4 +1,4 @@
-# Projekt (Projektname)
+#Triple A
 
 Klone das Repository mit folgendem Befehl:
 
@@ -8,10 +8,12 @@ git clone https://github.com/IlyaFreydkin/Triple-A
 
 ## Kurzbeschreibung
 
+![image](https://user-images.githubusercontent.com/100792432/214248392-56de9ef4-7f16-4934-bb59-b652964e26fa.png)
+
+
+
 ![image](https://user-images.githubusercontent.com/100792432/212732602-c075f8f0-f3ca-4897-9aba-37e87d11ee5b.png)
 
-
-![image](https://user-images.githubusercontent.com/100792432/212732672-b9ddd720-8e4b-46c5-ac18-dc52aa272f7d.png)
 
 
 Unser Projekt ist ein Streaming – Plattform, um Filme zu schauen. Tripple A wird eine 
