@@ -1,0 +1,43 @@
+@startuml "Model"
+
+
+entity Movie{
+    +Id : int 
+    + Title : string
+    +Link : string
+    
+    + Genre : Genre
+}
+entity User{
+
+    +Id : int
+    +Name : string
+    +Email : string
+    +Password : string
+   
+   
+}
+
+
+
+
+entity Genre{
+
++ Id : int
++ Name : string
+
+}
+
+entity MovieRating{
++ Value : int
++ Movie : movie
++ User : User
+
+
+
+}
+User o--> MovieRating
+MovieRating o--> Movie
+Movie o--> Genre
+
+@enduml

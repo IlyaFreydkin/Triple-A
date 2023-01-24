@@ -1,0 +1,50 @@
+{
+    "filme": [
+      {
+        "name": "Batman     ",
+        "image": "batman.png"
+      },
+      {
+        "name": "Spiderman ",
+        "image": "spiderman.jpg"
+      },
+      {
+        "name": "Fight Club ",
+        "image": "fightclub.png"
+      },
+      {
+        "name": "Titanic ",
+        "image": "titanic.jpg"
+      },
+      {
+        "name": "Starwars ",
+        "image": "starwars.png"
+      },
+      {
+        "name": "Jaws  ",
+        "image": "jaws.jpg"
+      },
+      {
+        "name": "The Lion King ",
+        "image": "thelionking.jpg"
+      },
+      {
+        "name": "Beauty and the Beast ",
+        "image": "beautyandthebeast.jpg"
+      },
+      {
+        "name": "Black Panther ",
+        "image": "blackpanther.jpg"
+      },
+      {
+        "name": "Itachi ",
+        "image": "itachi.png"
+      },
+      {
+        "name": "The Hunger Games",
+        "image": "thehungergames.jpg"
+      }
+     
+    ]
+  }
+  
