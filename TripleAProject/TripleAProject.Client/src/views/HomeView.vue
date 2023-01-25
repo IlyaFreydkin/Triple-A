@@ -8,11 +8,7 @@ import Card from '../components/Card.vue';
 <template>
     <div id="page">
         <NavBar></NavBar>
-   
-    
-       <Banner></Banner>
-
-
+        <Banner></Banner>
 
     <div class="container">
         <div class="row">
@@ -42,20 +38,12 @@ import Card from '../components/Card.vue';
             <div class="col-3">
                 <Card></Card>
             </div>
-        </div>
-
-
-      
-      
-    </div>
-
-    
+        </div>    
+    </div> 
     </div>
 
     <Footer></Footer>
 </template>
-
-
 
 <style scoped>
 
@@ -63,7 +51,5 @@ import Card from '../components/Card.vue';
     margin-top: 70px;
     margin-bottom: 70px;
 }
-
-
 
 </style>

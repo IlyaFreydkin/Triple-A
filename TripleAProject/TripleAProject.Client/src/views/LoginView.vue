@@ -6,9 +6,6 @@ import axios from 'axios'
 
 <template>
     <div class="login">
-
-
-
         <NavBar></NavBar>
 
         <div class="wrapper">
@@ -33,8 +30,6 @@ import axios from 'axios'
                 or <br> <router-link to="signup"><a href="#">Sign up</a></router-link>
             </div>
         </div>
-
-
     </div>
 
 </template>
@@ -57,7 +52,7 @@ export default {
         async sendLoginData() {
             console.log("Sending login data")
             try {
-                await axios.post("https://localhost:5001/api/users/login", {
+                await axios.post("https://localhost:5001/api/user/login", {
                     name: this.model.name,
                     password: this.model.password,
                 });

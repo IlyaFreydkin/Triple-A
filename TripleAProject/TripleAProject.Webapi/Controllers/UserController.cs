@@ -30,7 +30,7 @@ namespace TripleAProject.Webapi.Controllers
         [HttpPost("login")]
         public IActionResult Login([FromBody] CredentialsDto credentials)
         {
-            
+           
             var secret = Convert.FromBase64String(_config["Secret"]);
             var lifetime = TimeSpan.FromHours(3);
           

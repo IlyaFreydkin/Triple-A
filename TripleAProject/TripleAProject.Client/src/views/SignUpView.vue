@@ -6,12 +6,8 @@ import Footer from '../components/Footer.vue'
 
 
 <template>
-
-           <div class="signup">
-
-       
-
-          	<NavBar></NavBar>
+    <div class="signup">
+        <NavBar></NavBar>
 
     <div class="wrapper">
             <div class="logo">
@@ -39,12 +35,9 @@ import Footer from '../components/Footer.vue'
                 or <br> <router-link to="login"><a href="#">Login</a></router-link> 
             </div>
         </div>
-    
+        </div>
 
-         </div>
-
-         <Footer></Footer>
-
+        <Footer></Footer>
 </template>
 
 
