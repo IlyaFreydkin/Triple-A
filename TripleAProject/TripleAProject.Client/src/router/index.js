@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import store from '../store.js'
 import HomeView from '../views/HomeView.vue'
 import ForYouView from '../views/ForYouView.vue'
 import LoginView from '../views/LoginView.vue'
@@ -31,4 +32,13 @@ const router = createRouter({
   ]
 })
 
+router.beforeEach((to, from, next) => {
+  const authenticated = store.state.user.isLoggedIn;
+  if (to.meta.authorize && !authenticated) {
+    next("/");
+    return;
+  }
+  next();
+  return;
+});
 export default router
