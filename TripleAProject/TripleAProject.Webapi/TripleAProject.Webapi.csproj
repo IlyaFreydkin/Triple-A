@@ -7,9 +7,11 @@
 	</PropertyGroup>
 
 
-  <ItemGroup>
-    <ProjectReference Include="..\TripleAProject.Application\TripleAProject.Application.csproj" />
-	  <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.*" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\TripleAProject.Application\TripleAProject.Application.csproj" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.*" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.*" />
+	</ItemGroup>
 
 </Project>

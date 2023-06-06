@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Hosting;
 using System;
 using TripleAProject.Application.Dto;
 using TripleAProject.Webapi.Infrastructure;
@@ -14,11 +15,10 @@ builder.Services.AddAutoMapper(typeof(MappingProfile));
 builder.Services.AddControllers();
 builder.Services.AddDbContext<AAAContext>(opt =>
 {
-    opt.UseMySql(
-        builder.Configuration.GetConnectionString("MySql"),
-        new MariaDbServerVersion(new Version(10, 4, 22)));
+    opt.UseSqlServer(
+        builder.Configuration.GetConnectionString("Default"),
+        o => o.UseQuerySplittingBehavior(QuerySplittingBehavior.SingleQuery));
 });
-
 
 if (builder.Environment.IsDevelopment())
 {
@@ -32,9 +32,7 @@ if (builder.Environment.IsDevelopment())
     });
 }
 
-
 // JWT Authentication ******************************************************************************
-
 
 byte[] secret = Convert.FromBase64String(builder.Configuration["Secret"]);
 builder.Services
@@ -51,13 +49,12 @@ builder.Services
     });
 // *************************************************************************************************
 
-
 var app = builder.Build();
 app.UseHttpsRedirection();
 if (app.Environment.IsDevelopment())
 {
     using (var scope = app.Services.CreateScope())
-        using (var db = scope.ServiceProvider.GetRequiredService<AAAContext>())
+    using (var db = scope.ServiceProvider.GetRequiredService<AAAContext>())
     {
         db.Database.EnsureDeleted();
         db.Database.EnsureCreated();
