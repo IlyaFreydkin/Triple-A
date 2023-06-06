@@ -11,7 +11,7 @@ using System.Linq;
 
 namespace TripleAProject.Webapi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/users")]
     [ApiController]
     [AllowAnonymous]
     public class UserController : ControllerBase

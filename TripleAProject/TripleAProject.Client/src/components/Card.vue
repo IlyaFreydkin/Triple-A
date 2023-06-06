@@ -1,8 +1,30 @@
 <template>
     <div class="card">
-  Click me
+
+   <div class="card-body">
+       <img v-bind:src="image"   class="card-image"> 
+   </div>
 </div>
+
+
+
 </template>
+
+<script>
+export default {
+  props: {
+    image: String,
+  },
+
+  data() {
+    return {
+    }
+  },
+  
+}
+</script>
+
+
 
 <style scoped>
 
@@ -26,6 +48,20 @@
   user-select: none;
   font-weight: bolder;
 }
+.card {
+ 
+
+  background-size: cover;
+}
+
+.card-image {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
+  height: auto;
+}
+
 
 .card:hover {
   border: 1px solid black;

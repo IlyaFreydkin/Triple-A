@@ -15,7 +15,7 @@ import Footer from '../components/Footer.vue';
                         <div class="card item active">
                           <img 
                             class="card-img-top"
-                            src="../components/data/images/batman.png" 
+                            src="../assets/images/batman.png" 
                             alt="Batman"
                           >    
                         </div>
@@ -25,7 +25,7 @@ import Footer from '../components/Footer.vue';
                             <img
                                 class="card-img-top"
                                 id="card-fact-img"
-                                src="../components/data/images/beautyandthebeast.jpg" 
+                                src="../assets/images/beautyandthebeast.jpg" 
                                 alt="Beautyandthebeast"
                             >   
                         </div> 
@@ -35,7 +35,7 @@ import Footer from '../components/Footer.vue';
                             <img
                                 class="card-img-top"
                                 id="card-fact-img"
-                                src="../components/data/images/blackpanther.jpg" 
+                                src="../assets/images/blackpanther.jpg" 
                                 alt="Blackpanther"
                             >   
                         </div> 
@@ -49,7 +49,7 @@ import Footer from '../components/Footer.vue';
                         <div class="card item active">
                           <img 
                             class="card-img-top"
-                            src="../components/data/images/jaws.jpg" 
+                            src="../assets/images/jaws.jpg" 
                             alt="Jaws"
                           >    
                         </div>
@@ -59,7 +59,7 @@ import Footer from '../components/Footer.vue';
                             <img
                                 class="card-img-top"
                                 id="card-fact-img"
-                                src="../components/data/images/spiderman.jpg" 
+                                src="../assets/images/spiderman.jpg" 
                                 alt="Spiderman"
                             >   
                         </div> 
@@ -69,7 +69,7 @@ import Footer from '../components/Footer.vue';
                             <img
                                 class="card-img-top"
                                 id="card-fact-img"
-                                src="../components/data/images/starwars.png" 
+                                src="../assets/images/starwars.png" 
                                 alt="Starwars"
                             >   
                         </div> 
@@ -83,7 +83,7 @@ import Footer from '../components/Footer.vue';
                         <div class="card item active">
                           <img 
                             class="card-img-top"
-                            src="../components/data/images/thehungergames.jpg" 
+                            src="../assets/images/thehungergames.jpg" 
                             alt="TheHungerGames"
                           >    
                         </div>
@@ -93,7 +93,7 @@ import Footer from '../components/Footer.vue';
                             <img
                                 class="card-img-top"
                                 id="card-fact-img"
-                                src="../components/data/images/thelionking.jpg" 
+                                src="../assets/images/thelionking.jpg" 
                                 alt="TheLionKing"
                             >   
                         </div> 
@@ -103,7 +103,7 @@ import Footer from '../components/Footer.vue';
                             <img
                                 class="card-img-top"
                                 id="card-fact-img"
-                                src="../components/data/images/titanic.jpg" 
+                                src="../assets/images/titanic.jpg" 
                                 alt="Titanic"
                             >   
                         </div> 
@@ -147,6 +147,20 @@ import Footer from '../components/Footer.vue';
     padding: 3rem;
     box-shadow:  14px 14px 28px #414141,
                 -14px -14px 28px #5b5b5b;
+}
+
+.card {
+ 
+
+  background-size: cover;
+}
+
+.card-image {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
+  height: auto;
 }
 
 </style>
