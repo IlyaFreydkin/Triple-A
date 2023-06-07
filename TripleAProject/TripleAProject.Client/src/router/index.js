@@ -26,7 +26,20 @@ const router = createRouter({
       path: '/foryou',
       name: 'foryou',
       component: ForYouView
+    
+    },
+    {
+      path: '/aboutYou',
+      name: 'aboutYou',
+      component: () => import('../views/AboutYou.vue')
+    },
+    {
+      path: '/impressum',
+      name: 'impressum',
+      component: () => import('../views/impressum.vue')
     }
+  
+    
     
   ]
 })
